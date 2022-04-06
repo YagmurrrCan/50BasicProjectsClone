@@ -3,8 +3,8 @@
 ### Images of all projects are available in the README links given below.
 
 ## 1. Expanding Cards 
-![README](https://github.com/YagmurrrCan/50Days50ProjectsClone/tree/main/01-Expanding_Cards)
+[README-01](https://github.com/YagmurrrCan/50Days50ProjectsClone/tree/main/01-Expanding_Cards)
 
 ## 2. Progress Steps
-[README](https://github.com/YagmurrrCan/50Days50ProjectsClone/tree/main/02-Progress_Steps)
+[README-02](https://github.com/YagmurrrCan/50Days50ProjectsClone/tree/main/02-Progress_Steps)
  
