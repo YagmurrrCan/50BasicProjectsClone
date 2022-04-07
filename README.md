@@ -8,3 +8,6 @@
 ## 2. Progress Steps
 [README-02](https://github.com/YagmurrrCan/50Days50ProjectsClone/tree/main/02-Progress_Steps)
  
+## 3. Rotating Navigation
+[README-03](https://github.com/YagmurrrCan/50Days50ProjectsClone/tree/main/03-Rotating_Navigation)
+ 
