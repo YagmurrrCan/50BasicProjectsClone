@@ -1,0 +1,131 @@
+
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,700;1,400;1,700&display=swap');
+
+* {
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    font-size: 18px;
+    background-color: #290303;
+    color: black;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+.container {
+    background-color: antiquewhite;
+    transform-origin: top left;
+    transition: 0.4s linear;
+    width: 100vw;
+    height: 100vh;
+    padding: 50px;
+}
+
+.container.show-nav {
+    transform: rotate(-25deg);
+}
+
+.circle-container {
+    position: fixed;
+    top: -100px;
+    left: -100px;
+
+}
+
+.circle {
+    background-color: cadetblue;
+    border-radius: 50%;
+    height: 200px;
+    width: 200px;
+    position: relative;
+    transition: transform 0.5s linear;
+}
+
+.circle button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 100px;
+    background-color: transparent;
+    color: antiquewhite;
+    border: none;
+    font-size: 26px;
+}
+
+.circle button:focus{
+    outline: none;
+}
+
+.circle button#open{
+    left: 60%;
+    cursor: pointer;
+}
+
+.circle button#close{
+    top: 60%;
+    transform: rotate(90deg);     /* 90 derece yaptık cünkü x 3.bölgede open ise 4.bölgede */
+    transform-origin: top left;  /* Origin noktası olarak top left laınır*/
+    cursor: pointer;
+}
+
+.container.show-nav .circle {
+    transform: rotate(-65deg);
+}
+
+.content {
+    max-width: 1000px;
+    margin: 50px auto;
+}
+
+.content h1 {
+    margin: 0;
+    
+}
+.content small {
+    color: cadetblue;
+    font-style: italic;
+    font-size: medium;
+}
+.content p {
+    color: #290303;
+    line-height: 1.5;
+}
+.content img {
+    max-width: 100%;
+}
+
+nav {
+    position: fixed;
+    bottom: 25%;
+    left: 0;
+    z-index: 100;
+}
+
+nav ul {
+    list-style: none;
+    padding-left: 30px;
+}
+
+nav ul li {
+    text-transform: uppercase;
+    color: antiquewhite;
+    margin: 40px 0;
+    transform: translateX(-100%);   /* Kaybolacak ve bastıgımız zaman gelecek */
+    transition: transform 0.4s ease-in;
+}
+
+nav ul li+li {     /* Ikıncı li ye ulasmak icin*/
+    margin-left: 15px;
+    transform: translateX(-150%);
+}
+
+nav ul li+li+li {    /* Son li ye ulasmak istiyoruz*/
+    margin-left: 30px;
+    transform: translateX(-200%);
+}
+
+.container.show-nav + nav li {
+    transform: translateX(0);
+    transition-delay: 0.3s;
+}
