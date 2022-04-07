@@ -10,4 +10,6 @@
  
 ## 3. Rotating Navigation
 [README-03](https://github.com/YagmurrrCan/50Days50ProjectsClone/tree/main/03-Rotating_Navigation)
- 
+
+## 4. Hidden Search Widget
+[README-04](https://github.com/YagmurrrCan/50Days50ProjectsClone/tree/main/04-Hidden_Search_Widget)
