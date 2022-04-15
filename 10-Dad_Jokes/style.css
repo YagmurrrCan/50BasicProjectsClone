@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,700;1,400;1,700&display=swap');
+
+:root {
+    --heading-color: #432818;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family:'Times New Roman', Times, serif;
+    background-color: #920044;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+    padding: 20px;
+}
+
+.container {
+    display: block;
+    background-color: antiquewhite;
+    padding: 50px 20px;
+    text-align: center;
+    justify-content: center;
+    border-radius: 10px;
+    width: 800px;
+    max-width: 100%;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.1);
+}
+
+h3 {
+    margin: 0;
+    letter-spacing: 2px;  /* Harflerin arasına boşluk bırakabilmek için*/
+    opacity: 0.5;         /*Yazının rengini açık gri yaptık*/
+}   
+
+.joke {
+    font-size: 30px;
+    letter-spacing: 1px;
+    line-height: 40px;
+    max-width: 600px;
+    margin: 50px auto;
+}
+
+.btn {
+    background-color: #80013c;
+    border: none;
+    color: antiquewhite;
+    font-size: 16px;
+    border-radius: 40px;
+    padding: 15px 40px;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+btn:hover {
+    transform: scale(0.98);
+}
+
+btn:focus {
+    outline: none;
+}
