@@ -1,0 +1,125 @@
+
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,700;1,400;1,700&display=swap');
+
+:root {
+    --heading-color: #432818;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family:'Times New Roman', Times, serif;
+    background-color: #fefae0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+.container {
+    background-color: #fff;
+    padding: 20px 40px;
+    border-radius: 10px;
+    box-shadow: 2px 3px 10px rgba(0, 0, 1, 0.6);
+}
+
+.container h1 {
+    color: var(--heading-color);
+    margin-bottom: 30px;
+    text-align: center;
+    font-family: inherit;
+}
+
+.container .form-control {
+    position: relative;
+    margin: 20px 0px 40px; 
+}
+
+.form-control input {
+    border: none;
+    border-bottom: 2px solid #e7e4cc;
+    display: block;
+    width: 100%;
+    padding: 15px;
+    color: #333;
+    background-color: transparent;
+}
+
+/*normalde yazı yazmak için tıkladığımızda border çıkıyordu onu outline ile yok ettik
+    altlarındaki çizgiyi yukarda açık renk verdik şimdi tıklanınca koyulaşacak
+
+    valid kontrol eder
+*/
+.form-control input:focus,
+.form-control input:valid {
+    outline: none;
+    border-bottom-color: #a5a394;
+    font-size: 16px;
+}
+
+.btn {
+    cursor: pointer;
+    display: inline-block;
+    width: 100%;
+    background-color: var(--heading-color);
+    border-radius: 20px;
+    border: none;
+    color: #e7e4cc;
+    font-size: 17px;
+    padding: 15px;
+    font-family: inherit;
+}
+
+.btn:focus {
+    outline: none;
+}
+
+.btn:active{
+    transform: scale(0.98);
+}
+
+.text {
+    font-size: 15px;
+    margin-top: 2rem;
+}
+
+.text a:hover {
+    box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.container a {
+    text-decoration: none;
+    color: var(--heading-color);
+    padding: 5px;
+    border-radius: 50px;
+    border: 1px solid;
+    font-size: small;
+}
+
+.container a:hover {
+    text-shadow: #030300;
+}
+
+.form-control label {
+    position: absolute;
+    top: 15px;
+    left: 0;
+    pointer-events: none;
+}
+
+.form-control label span {
+    display: inline-block;
+    font-size: 16px;
+    min-width: 5px;
+    transition: 0.3s cubic-bezier(0.7, -0.6, 0.3, 1.55);
+}
+
+.form-control input:focus + label span,
+.form-control input:valid + label span {
+    color: #030300;
+    transform: translateY(-30px);
+}
