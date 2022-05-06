@@ -1,0 +1,125 @@
+
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,700;1,400;1,700&display=swap');
+
+:root {
+    --opened-bg-color: #ff9f1c;
+}
+
+* {
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    overflow: hidden;
+    background-color: #f1faee;
+}
+
+h1 {
+    margin: 0;
+    text-transform: uppercase;
+    text-align: center;
+    background-color: black;
+    color: #f1faee;
+    padding: 30px 5px;
+    letter-spacing: 2px;
+}
+
+.faq-container {
+    justify-content: center;
+    text-align: center; 
+    align-items: center; 
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.faq {
+    color: rgb(17, 0, 0);
+    border: 1px solid rgb(37, 36, 36);
+    border-radius: 10px;
+    background-color: transparent;
+    margin: 20px 0;
+    padding: 30px;
+    overflow: hidden;
+    transition: 0.5s ease;
+    position: relative;
+}
+
+.faq.active {
+    background-color: #fff;
+    box-shadow: 0px 3pxp 6px rgba(0, 0, 0, 0.3);
+    border: 3px solid var(--opened-bg-color);
+}
+
+.faq.active::before,
+.faq.active::after {
+  content: "\f094";
+  font-family: "Font Awesome 6 Free";
+  color: rgb(255, 0, 179);
+  font-size: 5rem;
+  position: absolute;
+  top: 20px;
+  left: 10px;
+  z-index: 0;
+  opacity: 0.2;
+}
+
+.faq.active::before {
+    color: #ff9f1c;
+    top: 20px;
+    left: 50px;
+    transform: rotateY(180deg);
+}
+
+.faq-title {
+    text-transform: capitalize;
+    font-family: inherit;
+    margin: 0 35px;
+    transition: 0.5s ease;
+}
+
+.faq.active .faq-title {
+    color: var(--opened-bg-color);
+}
+
+.faq-text {
+    margin: 30px 0 0;
+    display: none;
+}
+
+.faq.active .faq-text {
+    display: block;
+}
+
+.faq-toggle {
+    border: 0;
+    cursor: pointer;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    padding: 0;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    transition: 0.5s ease;
+}
+
+.faq.active .faq-toggle {
+    color: var(--opened-bg-color);
+}
+
+.faq-toggle .fa-xmark {
+    display: none;
+}
+
+.faq.active .faq-toggle .fa-xmark{
+    display: block;
+}
+
+.faq.active .faq-toggle .fa-chevron-down {
+    display: none;
+}
